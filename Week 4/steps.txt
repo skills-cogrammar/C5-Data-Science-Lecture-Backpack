@@ -1,0 +1,50 @@
+Let us ensure that we have the Python package manager pip installed.
+
+You can also check out the video at this link (https://www.loom.com/share/afc64476baee427ab0c8760cbf8ae0f7?sid=c571e6ac-b6c9-402e-b5f8-8f52e7f17271)
+for how to install your package manager as well as installing modules.
+
+Open Terminal and type:
+python3 -m pip --version
+
+If it has not been installed type the following command to install:
+
+python3 -m pip install --upgrade pip
+
+Once pip is installed, we proceed to install the package virtualenv:
+
+python3 -m pip install --user virtualenv
+
+Go to your project folder, the environment we want to create is going to be loacted in any specific path where your project is located
+
+Type the following command:
+
+cd /Users/username/Documents/
+
+Create the virtual environment:
+
+python3 -m venv _env1
+
+(Here _env1 refers to the name of the environment, choose any of your choosing.)
+
+Activate the virtual environment:
+source _env1/bin/activate
+
+To deactivate the environment simply type:
+deactivate
+
+To install spacy via pip type the following commands at a time:
+
+pip install -U pip setuptools wheel
+pip install -U spacy
+python -m spacy download en_core_web_sm
+
+The final command will download the small English package. To download the medium sized package replace "en_core_web_sm" with "en_core_web_md"
+
+Once the download is complete, navigate to VS Code. 
+Since we've manually created our virtual environment, navigate to "View" then "Command Palette".
+Select "Python: Select Interpreter". This command will display all available global environments and virtual environments. 
+
+Select the virtual environment (env). 
+If the environment is not listed you may specify the path by clicking "Enter interpreter path" then select "Find" to browse the file system.
+
+You should be able to run the example.py file and start using the spaCy library
