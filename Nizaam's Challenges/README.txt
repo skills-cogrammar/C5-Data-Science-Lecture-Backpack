@@ -1,0 +1,2 @@
+DISCLAIMER - I have intentionally made these challenges difficult, this is because I'd like to encourage more reasearching when learning about concepts
+	as well as, obviously, challenging you. However, these challenges remain optional, but highly recommended. Good Luck.
