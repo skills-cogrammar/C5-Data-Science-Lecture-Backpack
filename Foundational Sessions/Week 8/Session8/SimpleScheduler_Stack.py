@@ -10,7 +10,7 @@ class SimpleScheduler:
 
     # Add tasks to the scheduler
     def add_task(self, value):
-        self.stack.appendleft(value)
+        self.stack.append(value)
 
     # Execute a task from the scheduler
     def execute_task(self):
