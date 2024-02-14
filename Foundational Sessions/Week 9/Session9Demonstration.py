@@ -37,7 +37,7 @@ print(sentence)  # Output: "Hello World"
 # String Concatenation using '+'
 start_time = time.time()
 concat_str = ""
-for _ in range(10000):
+for _ in range(500000):
     concat_str += "hello "
 end_time = time.time()
 print("Time with '+':", end_time - start_time)
@@ -45,7 +45,7 @@ print("Time with '+':", end_time - start_time)
 
 # String Concatenation using 'join()'
 start_time = time.time()
-join_str = ''.join(["hello " for _ in range(10000)])
+join_str = ''.join(["hello " for _ in range(500000)])
 end_time = time.time()
 print("Time with 'join()':", end_time - start_time)
 # Time with 'join()': 0.00049591064453125
