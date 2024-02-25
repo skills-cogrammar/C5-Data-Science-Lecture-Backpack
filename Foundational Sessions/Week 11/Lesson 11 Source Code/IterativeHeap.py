@@ -17,26 +17,26 @@ class IterativeHeap:
                 index = parent_index
             else:
                 break
-        while stack:
-            self._heapify_down_iterative(stack.pop())
 
     def _heapify_down_iterative(self, index):
-        # Iterative heapify down
         while (index * 2 + 1) < len(self.heap):
             smallest_child_index = index * 2 + 1
             if (index * 2 + 2) < len(self.heap) and self.heap[index * 2 + 2] < self.heap[smallest_child_index]:
                 smallest_child_index = index * 2 + 2
             if self.heap[index] > self.heap[smallest_child_index]:
                 self.heap[index], self.heap[smallest_child_index] = self.heap[smallest_child_index], self.heap[index]
-            index = smallest_child_index
+                index = smallest_child_index
+            else:
+                break
 
     def retrieve(self):
         if self.heap:
             value = self.heap[0]
-            # Move the last item to the root and heapify down
-            self.heap[0] = self.heap[-1]
-            self.heap.pop()
-            self._heapify_down_iterative(0)
+            if len(self.heap) > 1:
+                self.heap[0] = self.heap.pop() 
+                self._heapify_down_iterative(0)
+            else:
+                self.heap.pop()
             return value
         return None
 
